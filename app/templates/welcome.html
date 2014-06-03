@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<h2> Hello, this is the welcome page</h2>
+
+	<p> This page hosts information about the players from this league</p>
+
+	<p>Click <a href="/">here</a> to go to the Home page</p>
+		
+
+	{% for n in users %}
+	{{n.firstname }} | {{n.lastname}} | {{n.team}} | {{n.age}}
+	{% endfor %}
+{% endblock %}

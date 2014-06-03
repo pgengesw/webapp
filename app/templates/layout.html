@@ -1,0 +1,28 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{title}} - UBA</title>
+    {% else %}
+    <title>UBA House League</title>
+    {% endif %}
+	<link rel ="stylesheet" href = "{{url_for('static', filename='css/bootstrap.css') }}">
+  </head>
+  <body>
+	<header>
+		<div class="navbar navbar-inverse">
+			<div class="navbar-inner">
+				<a class="brand" href="/"> UBA</a>
+				<ul class="nav"
+					<li class="active"><a href="/">Home</a></li>
+					<li><a href="/welcome"> Welcome</a></li>
+					<li><a href="/"> link two</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+   
+    <div class = "container">
+    <hr>
+    {% block content %}{% endblock %}
+  </body>
+</html>
